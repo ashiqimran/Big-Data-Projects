@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -A uot143
+#SBATCH --job-name="multiply"
+#SBATCH --output="multiply.distr.out"
+#SBATCH --partition=compute
+## allocate 3 nodes for the Hadoop cluster: 3 datanodes, from which 1 is namenode
+#SBATCH --nodes=3
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=5G
+#SBATCH --export=ALL 
+#SBATCH --time=60
+
+export HADOOP_CONF_DIR=/home/$USER/cometcluster
+module load hadoop/2.6.0
+myhadoop-configure.sh
+start-dfs.sh
+start-yarn.sh
+
+hdfs dfs -mkdir -p /user/$USER
+hdfs dfs -put M-matrix-large.txt /user/$USER/M-matrix-large.txt
+hdfs dfs -put N-matrix-large.txt /user/$USER/N-matrix-large.txt
+hadoop jar multiply.jar edu.uta.cse6331.Multiply /user/$USER/M-matrix-large.txt /user/$USER/N-matrix-large.txt /user/$USER/intermediate /user/$USER/output
+rm -rf output-distr
+mkdir output-distr
+hdfs dfs -get /user/$USER/output/part* output-distr
+
+stop-yarn.sh
+stop-dfs.sh
+myhadoop-cleanup.sh

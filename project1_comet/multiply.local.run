@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH -A uot143
+#SBATCH --job-name="multiply.local"
+#SBATCH --output="multiply.local.out"
+#SBATCH --partition=shared
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --export=ALL 
+#SBATCH --time=10
+
+module load hadoop/2.6.0
+
+rm -rf output intermediate
+hadoop --config $HOME jar multiply.jar edu.uta.cse6331.Multiply M-matrix-small.txt N-matrix-small.txt intermediate output

@@ -1,0 +1,479 @@
+myHadoop: Setting MH_IPOIB_TRANSFORM='s/\([^.]*\).*$/\1.ibnet/' from myhadoop.conf
+myHadoop: Setting MH_SCRATCH_DIR=/scratch/$USER/$SLURM_JOBID from myhadoop.conf
+myHadoop: Using HADOOP_HOME=/opt/hadoop/2.6.0
+myHadoop: Using MH_SCRATCH_DIR=/scratch/aimram/4492066
+myHadoop: Using JAVA_HOME=/usr/java/latest
+myHadoop: Generating Hadoop configuration in directory in /home/aimram/cometcluster...
+myHadoop: Designating comet-06-10.ibnet as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+comet-06-10.ibnet
+comet-06-16.ibnet
+comet-06-59.ibnet
+16/09/28 17:22:30 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = comet-06-10.sdsc.edu/198.202.119.139
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.6.0
+STARTUP_MSG:   classpath = /home/aimram/cometcluster:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-recipes-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jets3t-0.9.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/gson-2.2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpcore-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-net-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpclient-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-framework-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-math3-3.1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-configuration-1.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-compiler-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-auth-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/mockito-all-1.8.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-api-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-digester-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsch-0.1.42.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jline-0.9.94.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-client-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-api-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-registry-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-tests-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0.jar:/opt/hadoop/2.6.0/contrib/capacity-scheduler/*.jar
+STARTUP_MSG:   build = https://git-wip-us.apache.org/repos/asf/hadoop.git -r e3496499ecb8d220fba99dc5ed4c99c8f9e33bb1; compiled by 'jenkins' on 2014-11-13T21:10Z
+STARTUP_MSG:   java = 1.8.0_60
+************************************************************/
+16/09/28 17:22:30 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+16/09/28 17:22:30 INFO namenode.NameNode: createNameNode [-format]
+16/09/28 17:22:30 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/09/28 17:22:30 WARN common.Util: Path /scratch/aimram/4492066/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+16/09/28 17:22:30 WARN common.Util: Path /scratch/aimram/4492066/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+Formatting using clusterid: CID-4603f05c-3ed5-419d-90b9-6b2484e1ee7b
+16/09/28 17:22:30 INFO namenode.FSNamesystem: No KeyProvider found.
+16/09/28 17:22:30 INFO namenode.FSNamesystem: fsLock is fair:true
+16/09/28 17:22:30 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+16/09/28 17:22:30 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: The block deletion will start around 2016 Sep 28 17:22:30
+16/09/28 17:22:30 INFO util.GSet: Computing capacity for map BlocksMap
+16/09/28 17:22:30 INFO util.GSet: VM type       = 64-bit
+16/09/28 17:22:30 INFO util.GSet: 2.0% max memory 958.5 MB = 19.2 MB
+16/09/28 17:22:30 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: defaultReplication         = 3
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: maxReplication             = 512
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: minReplication             = 1
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+16/09/28 17:22:30 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+16/09/28 17:22:30 INFO namenode.FSNamesystem: fsOwner             = aimram (auth:SIMPLE)
+16/09/28 17:22:30 INFO namenode.FSNamesystem: supergroup          = supergroup
+16/09/28 17:22:30 INFO namenode.FSNamesystem: isPermissionEnabled = true
+16/09/28 17:22:30 INFO namenode.FSNamesystem: HA Enabled: false
+16/09/28 17:22:30 INFO namenode.FSNamesystem: Append Enabled: true
+16/09/28 17:22:30 INFO util.GSet: Computing capacity for map INodeMap
+16/09/28 17:22:30 INFO util.GSet: VM type       = 64-bit
+16/09/28 17:22:30 INFO util.GSet: 1.0% max memory 958.5 MB = 9.6 MB
+16/09/28 17:22:30 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+16/09/28 17:22:30 INFO namenode.NameNode: Caching file names occuring more than 10 times
+16/09/28 17:22:30 INFO util.GSet: Computing capacity for map cachedBlocks
+16/09/28 17:22:30 INFO util.GSet: VM type       = 64-bit
+16/09/28 17:22:30 INFO util.GSet: 0.25% max memory 958.5 MB = 2.4 MB
+16/09/28 17:22:30 INFO util.GSet: capacity      = 2^18 = 262144 entries
+16/09/28 17:22:30 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+16/09/28 17:22:30 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+16/09/28 17:22:30 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
+16/09/28 17:22:30 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+16/09/28 17:22:30 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+16/09/28 17:22:30 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+16/09/28 17:22:30 INFO util.GSet: VM type       = 64-bit
+16/09/28 17:22:30 INFO util.GSet: 0.029999999329447746% max memory 958.5 MB = 294.5 KB
+16/09/28 17:22:30 INFO util.GSet: capacity      = 2^15 = 32768 entries
+16/09/28 17:22:30 INFO namenode.NNConf: ACLs enabled? false
+16/09/28 17:22:30 INFO namenode.NNConf: XAttrs enabled? true
+16/09/28 17:22:30 INFO namenode.NNConf: Maximum size of an xattr: 16384
+16/09/28 17:22:30 INFO namenode.FSImage: Allocated new BlockPoolId: BP-234899092-198.202.119.139-1475108550657
+16/09/28 17:22:30 INFO common.Storage: Storage directory /scratch/aimram/4492066/namenode_data has been successfully formatted.
+16/09/28 17:22:30 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+16/09/28 17:22:30 INFO util.ExitUtil: Exiting with status 0
+16/09/28 17:22:30 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at comet-06-10.sdsc.edu/198.202.119.139
+************************************************************/
+16/09/28 17:22:31 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [comet-06-10.ibnet]
+comet-06-10.ibnet: starting namenode, logging to /scratch/aimram/4492066/logs/hadoop-aimram-namenode-comet-06-10.sdsc.edu.out
+comet-06-10.ibnet: starting datanode, logging to /scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-10.sdsc.edu.out
+comet-06-16.ibnet: starting datanode, logging to /scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-16.sdsc.edu.out
+comet-06-59.ibnet: starting datanode, logging to /scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-59.sdsc.edu.out
+Starting secondary namenodes [comet-06-10.ibnet]
+comet-06-10.ibnet: starting secondarynamenode, logging to /scratch/aimram/4492066/logs/hadoop-aimram-secondarynamenode-comet-06-10.sdsc.edu.out
+16/09/28 17:22:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /scratch/aimram/4492066/logs/yarn-aimram-resourcemanager-comet-06-10.out
+comet-06-10.ibnet: starting nodemanager, logging to /scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-10.sdsc.edu.out
+comet-06-16.ibnet: starting nodemanager, logging to /scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-16.sdsc.edu.out
+comet-06-59.ibnet: starting nodemanager, logging to /scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-59.sdsc.edu.out
+16/09/28 17:22:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/09/28 17:22:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/09/28 17:22:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/09/28 17:22:54 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/09/28 17:22:54 INFO client.RMProxy: Connecting to ResourceManager at comet-06-10.ibnet/10.22.254.141:8032
+16/09/28 17:22:54 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+16/09/28 17:22:55 INFO input.FileInputFormat: Total input paths to process : 1
+16/09/28 17:22:55 INFO input.FileInputFormat: Total input paths to process : 1
+16/09/28 17:22:55 INFO mapreduce.JobSubmitter: number of splits:2
+16/09/28 17:22:55 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1475108567707_0001
+16/09/28 17:22:55 INFO impl.YarnClientImpl: Submitted application application_1475108567707_0001
+16/09/28 17:22:55 INFO mapreduce.Job: The url to track the job: http://comet-06-10.ibnet:8088/proxy/application_1475108567707_0001/
+16/09/28 17:22:55 INFO mapreduce.Job: Running job: job_1475108567707_0001
+16/09/28 17:23:00 INFO mapreduce.Job: Job job_1475108567707_0001 running in uber mode : false
+16/09/28 17:23:00 INFO mapreduce.Job:  map 0% reduce 0%
+16/09/28 17:23:06 INFO mapreduce.Job:  map 100% reduce 0%
+16/09/28 17:23:10 INFO mapreduce.Job:  map 100% reduce 100%
+16/09/28 17:23:11 INFO mapreduce.Job: Job job_1475108567707_0001 completed successfully
+16/09/28 17:23:11 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=248886
+		FILE: Number of bytes written=816434
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=250043
+		HDFS: Number of bytes written=9018487
+		HDFS: Number of read operations=9
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=2
+		Launched reduce tasks=1
+		Data-local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=6273
+		Total time spent by all reduces in occupied slots (ms)=2290
+		Total time spent by all map tasks (ms)=6273
+		Total time spent by all reduce tasks (ms)=2290
+		Total vcore-seconds taken by all map tasks=6273
+		Total vcore-seconds taken by all reduce tasks=2290
+		Total megabyte-seconds taken by all map tasks=6423552
+		Total megabyte-seconds taken by all reduce tasks=2344960
+	Map-Reduce Framework
+		Map input records=12444
+		Map output records=12444
+		Map output bytes=223992
+		Map output materialized bytes=248892
+		Input split bytes=542
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100
+		Reduce shuffle bytes=248892
+		Reduce input records=12444
+		Reduce output records=372076
+		Spilled Records=24888
+		Shuffled Maps =2
+		Failed Shuffles=0
+		Merged Map outputs=2
+		GC time elapsed (ms)=216
+		CPU time spent (ms)=8080
+		Physical memory (bytes) snapshot=764526592
+		Virtual memory (bytes) snapshot=6501019648
+		Total committed heap usage (bytes)=551550976
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=9018487
+16/09/28 17:23:11 INFO client.RMProxy: Connecting to ResourceManager at comet-06-10.ibnet/10.22.254.141:8032
+16/09/28 17:23:11 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+16/09/28 17:23:11 INFO input.FileInputFormat: Total input paths to process : 1
+16/09/28 17:23:11 INFO mapreduce.JobSubmitter: number of splits:1
+16/09/28 17:23:11 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1475108567707_0002
+16/09/28 17:23:11 INFO impl.YarnClientImpl: Submitted application application_1475108567707_0002
+16/09/28 17:23:11 INFO mapreduce.Job: The url to track the job: http://comet-06-10.ibnet:8088/proxy/application_1475108567707_0002/
+16/09/28 17:23:11 INFO mapreduce.Job: Running job: job_1475108567707_0002
+16/09/28 17:23:17 INFO mapreduce.Job: Job job_1475108567707_0002 running in uber mode : false
+16/09/28 17:23:17 INFO mapreduce.Job:  map 0% reduce 0%
+16/09/28 17:23:24 INFO mapreduce.Job:  map 100% reduce 0%
+16/09/28 17:23:29 INFO mapreduce.Job:  map 100% reduce 100%
+16/09/28 17:23:29 INFO mapreduce.Job: Job job_1475108567707_0002 completed successfully
+16/09/28 17:23:29 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=6697374
+		FILE: Number of bytes written=13606611
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9018620
+		HDFS: Number of bytes written=1463712
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=5569
+		Total time spent by all reduces in occupied slots (ms)=2372
+		Total time spent by all map tasks (ms)=5569
+		Total time spent by all reduce tasks (ms)=2372
+		Total vcore-seconds taken by all map tasks=5569
+		Total vcore-seconds taken by all reduce tasks=2372
+		Total megabyte-seconds taken by all map tasks=5702656
+		Total megabyte-seconds taken by all reduce tasks=2428928
+	Map-Reduce Framework
+		Map input records=372076
+		Map output records=372076
+		Map output bytes=5953216
+		Map output materialized bytes=6697374
+		Input split bytes=133
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=59889
+		Reduce shuffle bytes=6697374
+		Reduce input records=372076
+		Reduce output records=59889
+		Spilled Records=744152
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=111
+		CPU time spent (ms)=8220
+		Physical memory (bytes) snapshot=500133888
+		Virtual memory (bytes) snapshot=4341362688
+		Total committed heap usage (bytes)=328728576
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=9018487
+	File Output Format Counters 
+		Bytes Written=1463712
+16/09/28 17:23:29 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+stopping yarn daemons
+stopping resourcemanager
+comet-06-10.ibnet: stopping nodemanager
+comet-06-10.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+comet-06-16.ibnet: stopping nodemanager
+comet-06-16.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+comet-06-59.ibnet: stopping nodemanager
+comet-06-59.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+no proxyserver to stop
+16/09/28 17:23:41 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Stopping namenodes on [comet-06-10.ibnet]
+comet-06-10.ibnet: stopping namenode
+comet-06-10.ibnet: stopping datanode
+comet-06-16.ibnet: stopping datanode
+comet-06-59.ibnet: stopping datanode
+Stopping secondary namenodes [comet-06-10.ibnet]
+comet-06-10.ibnet: stopping secondarynamenode
+16/09/28 17:23:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Copying Hadoop logs back to /home/aimram/cometcluster/logs...
+`/scratch/aimram/4492066/logs' -> `/home/aimram/cometcluster/logs'
+`/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-10.sdsc.edu.log' -> `/home/aimram/cometcluster/logs/yarn-aimram-nodemanager-comet-06-10.sdsc.edu.log'
+`/scratch/aimram/4492066/logs/SecurityAuth-aimram.audit' -> `/home/aimram/cometcluster/logs/SecurityAuth-aimram.audit'
+`/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-10.sdsc.edu.out' -> `/home/aimram/cometcluster/logs/hadoop-aimram-datanode-comet-06-10.sdsc.edu.out'
+`/scratch/aimram/4492066/logs/hadoop-aimram-secondarynamenode-comet-06-10.sdsc.edu.log' -> `/home/aimram/cometcluster/logs/hadoop-aimram-secondarynamenode-comet-06-10.sdsc.edu.log'
+`/scratch/aimram/4492066/logs/hadoop-aimram-namenode-comet-06-10.sdsc.edu.out' -> `/home/aimram/cometcluster/logs/hadoop-aimram-namenode-comet-06-10.sdsc.edu.out'
+`/scratch/aimram/4492066/logs/yarn-aimram-resourcemanager-comet-06-10.out' -> `/home/aimram/cometcluster/logs/yarn-aimram-resourcemanager-comet-06-10.out'
+`/scratch/aimram/4492066/logs/userlogs' -> `/home/aimram/cometcluster/logs/userlogs'
+`/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002' -> `/home/aimram/cometcluster/logs/userlogs/application_1475108567707_0002'
+`/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001' -> `/home/aimram/cometcluster/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001'
+`/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/stderr' -> `/home/aimram/cometcluster/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/stderr'
+`/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/stdout' -> `/home/aimram/cometcluster/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/stdout'
+`/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/syslog' -> `/home/aimram/cometcluster/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/syslog'
+`/scratch/aimram/4492066/logs/hadoop-aimram-namenode-comet-06-10.sdsc.edu.log' -> `/home/aimram/cometcluster/logs/hadoop-aimram-namenode-comet-06-10.sdsc.edu.log'
+`/scratch/aimram/4492066/logs/yarn-aimram-resourcemanager-comet-06-10.log' -> `/home/aimram/cometcluster/logs/yarn-aimram-resourcemanager-comet-06-10.log'
+`/scratch/aimram/4492066/logs/hadoop-aimram-secondarynamenode-comet-06-10.sdsc.edu.out' -> `/home/aimram/cometcluster/logs/hadoop-aimram-secondarynamenode-comet-06-10.sdsc.edu.out'
+`/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-10.sdsc.edu.log' -> `/home/aimram/cometcluster/logs/hadoop-aimram-datanode-comet-06-10.sdsc.edu.log'
+`/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-10.sdsc.edu.out' -> `/home/aimram/cometcluster/logs/yarn-aimram-nodemanager-comet-06-10.sdsc.edu.out'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram/filecache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram/appcache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/nmPrivate'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/filecache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch'
+removed directory: `/scratch/aimram/4492066/tmp/dfs/namesecondary'
+removed directory: `/scratch/aimram/4492066/tmp/dfs'
+removed directory: `/scratch/aimram/4492066/tmp'
+removed `/scratch/aimram/4492066/namenode_data/current/VERSION'
+removed `/scratch/aimram/4492066/namenode_data/current/edits_inprogress_0000000000000000001'
+removed `/scratch/aimram/4492066/namenode_data/current/seen_txid'
+removed `/scratch/aimram/4492066/namenode_data/current/fsimage_0000000000000000000'
+removed `/scratch/aimram/4492066/namenode_data/current/fsimage_0000000000000000000.md5'
+removed directory: `/scratch/aimram/4492066/namenode_data/current'
+removed directory: `/scratch/aimram/4492066/namenode_data'
+removed `/scratch/aimram/4492066/hdfs_data/current/VERSION'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/dncp_block_verification.log.prev'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/tmp'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/dncp_block_verification.log.curr'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/rbw'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/dfsUsed'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741846_1022.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741844'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741833'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741836_1012.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741834'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741843'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741825'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741845_1021.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741836'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741846'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741834_1010.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741826'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741835'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741845'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741844_1020.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741833_1009.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741843_1019.meta'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/VERSION'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current'
+removed directory: `/scratch/aimram/4492066/hdfs_data'
+removed directory: `/scratch/aimram/4492066/pids'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-10.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/SecurityAuth-aimram.audit'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-10.sdsc.edu.out'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-secondarynamenode-comet-06-10.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-namenode-comet-06-10.sdsc.edu.out'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-resourcemanager-comet-06-10.out'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/stderr'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/stdout'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001/syslog'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000001'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002'
+removed directory: `/scratch/aimram/4492066/logs/userlogs'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-namenode-comet-06-10.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-resourcemanager-comet-06-10.log'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-secondarynamenode-comet-06-10.sdsc.edu.out'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-10.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-10.sdsc.edu.out'
+removed directory: `/scratch/aimram/4492066/logs'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/nmPrivate'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram/appcache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram/filecache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/filecache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch'
+removed `/scratch/aimram/4492066/hdfs_data/current/VERSION'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741834_1010.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741845_1021.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741833_1009.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741844_1020.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741843'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741834'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741843_1019.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741833'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741844'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741846'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741846_1022.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741825'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741836'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741845'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741836_1012.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741826'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741835'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/rbw'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/dfsUsed'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/VERSION'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/dncp_block_verification.log.curr'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/tmp'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/dncp_block_verification.log.prev'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current'
+removed directory: `/scratch/aimram/4492066/hdfs_data'
+removed directory: `/scratch/aimram/4492066/pids'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-16.sdsc.edu.out'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-16.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/SecurityAuth-aimram.audit'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-16.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000002/stderr'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000002/stdout'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000002/syslog'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000002'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000003/stderr'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000003/syslog'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000003/stdout'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000003'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000004/syslog'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000004/stdout'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000004/stderr'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000004'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000002/stderr'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000002/stdout'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000002/syslog'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000002'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000003/syslog'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000003/stdout'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000003/stderr'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002/container_1475108567707_0002_01_000003'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0002'
+removed directory: `/scratch/aimram/4492066/logs/userlogs'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-16.sdsc.edu.out'
+removed directory: `/scratch/aimram/4492066/logs'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/nmPrivate'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram/filecache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram/appcache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache/aimram'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/usercache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch/filecache'
+removed directory: `/scratch/aimram/4492066/mapred_scratch'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/dncp_block_verification.log.prev'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/rbw'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/dfsUsed'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/VERSION'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741846'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741846_1022.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741836'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741825'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741845'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741835'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741836_1012.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741826'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741845_1021.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741834_1010.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741834'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741843'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741843_1019.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741844'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741833'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741833_1009.meta'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0/blk_1073741844_1020.meta'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0/subdir0'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized/subdir0'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current/finalized'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/current'
+removed `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/dncp_block_verification.log.curr'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657/tmp'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current/BP-234899092-198.202.119.139-1475108550657'
+removed `/scratch/aimram/4492066/hdfs_data/current/VERSION'
+removed directory: `/scratch/aimram/4492066/hdfs_data/current'
+removed directory: `/scratch/aimram/4492066/hdfs_data'
+removed directory: `/scratch/aimram/4492066/pids'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-59.sdsc.edu.out'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-59.sdsc.edu.out'
+removed `/scratch/aimram/4492066/logs/hadoop-aimram-datanode-comet-06-59.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/yarn-aimram-nodemanager-comet-06-59.sdsc.edu.log'
+removed `/scratch/aimram/4492066/logs/SecurityAuth-aimram.audit'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000001/stderr'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000001/syslog'
+removed `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000001/stdout'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001/container_1475108567707_0001_01_000001'
+removed directory: `/scratch/aimram/4492066/logs/userlogs/application_1475108567707_0001'
+removed directory: `/scratch/aimram/4492066/logs/userlogs'
+removed directory: `/scratch/aimram/4492066/logs'
+removed directory: `/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08/.active'
+removed directory: `/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08/jsp'
+removed directory: `/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08'
+removed directory: `/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_1755930583307266409/.active'
+removed directory: `/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_1755930583307266409/jsp'
+removed directory: `/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_1755930583307266409'
+removed directory: `/tmp/Jetty_comet.06.10_ibnet_50090_secondary____oplqj4/.active'
+removed directory: `/tmp/Jetty_comet.06.10_ibnet_50090_secondary____oplqj4/jsp'
+removed directory: `/tmp/Jetty_comet.06.10_ibnet_50090_secondary____oplqj4'

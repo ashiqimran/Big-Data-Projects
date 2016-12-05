@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -p shared
+#SBATCH --job-name="multiply.build"
+#SBATCH --output="multiply.build.out"
+#SBATCH -A uot143
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --export=ALL 
+#SBATCH -t 00:05:00
+
+module load hadoop/2.6.0
+
+mkdir -p classes
+javac -d classes -cp classes:`$HADOOP_HOME/bin/hadoop classpath` Multiply.java
+jar cf multiply.jar -C classes .

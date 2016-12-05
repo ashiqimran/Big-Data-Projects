@@ -1,0 +1,783 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/10/26 23:10:38 INFO SparkContext: Running Spark version 1.5.2
+16/10/26 23:10:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/10/26 23:10:38 INFO SecurityManager: Changing view acls to: aimram
+16/10/26 23:10:38 INFO SecurityManager: Changing modify acls to: aimram
+16/10/26 23:10:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(aimram); users with modify permissions: Set(aimram)
+16/10/26 23:10:39 INFO Slf4jLogger: Slf4jLogger started
+16/10/26 23:10:39 INFO Remoting: Starting remoting
+16/10/26 23:10:39 INFO Utils: Successfully started service 'sparkDriver' on port 42369.
+16/10/26 23:10:39 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@198.202.116.129:42369]
+16/10/26 23:10:39 INFO SparkEnv: Registering MapOutputTracker
+16/10/26 23:10:40 INFO SparkEnv: Registering BlockManagerMaster
+16/10/26 23:10:40 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-55212699-0d1e-405a-bee2-5c0c816d3935
+16/10/26 23:10:40 INFO MemoryStore: MemoryStore started with capacity 530.0 MB
+16/10/26 23:10:40 INFO HttpFileServer: HTTP File server directory is /tmp/spark-7eab1c2e-7f0b-4369-a427-28efd5f18309/httpd-e79f7a65-bea3-4279-82cf-4b4320cb2cd1
+16/10/26 23:10:40 INFO HttpServer: Starting HTTP Server
+16/10/26 23:10:40 INFO Utils: Successfully started service 'HTTP file server' on port 35086.
+16/10/26 23:10:40 INFO SparkEnv: Registering OutputCommitCoordinator
+16/10/26 23:10:40 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+16/10/26 23:10:40 INFO SparkUI: Started SparkUI at http://198.202.116.129:4040
+16/10/26 23:10:40 INFO SparkContext: Added JAR file:/home/aimram/project3/graph.jar at http://198.202.116.129:35086/jars/graph.jar with timestamp 1477548640607
+16/10/26 23:10:40 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+16/10/26 23:10:40 INFO Executor: Starting executor ID driver on host localhost
+16/10/26 23:10:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41122.
+16/10/26 23:10:40 INFO NettyBlockTransferService: Server created on 41122
+16/10/26 23:10:40 INFO BlockManagerMaster: Trying to register BlockManager
+16/10/26 23:10:40 INFO BlockManagerMasterEndpoint: Registering block manager localhost:41122 with 530.0 MB RAM, BlockManagerId(driver, localhost, 41122)
+16/10/26 23:10:40 INFO BlockManagerMaster: Registered BlockManager
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(120040) called with curMem=0, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 117.2 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(12673) called with curMem=120040, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 12.4 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:41122 (size: 12.4 KB, free: 530.0 MB)
+16/10/26 23:10:42 INFO SparkContext: Created broadcast 0 from textFile at Graph.scala:16
+16/10/26 23:10:42 INFO FileInputFormat: Total input paths to process : 1
+16/10/26 23:10:42 INFO SparkContext: Starting job: collect at Graph.scala:88
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 5 (map at Graph.scala:28)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 4 (map at Graph.scala:28)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 9 (map at Graph.scala:29)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 13 (map at Graph.scala:35)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 12 (map at Graph.scala:35)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 19 (map at Graph.scala:48)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 22 (map at Graph.scala:51)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 21 (map at Graph.scala:51)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 28 (map at Graph.scala:60)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 31 (map at Graph.scala:63)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 30 (map at Graph.scala:63)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 37 (map at Graph.scala:70)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 40 (map at Graph.scala:73)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 39 (map at Graph.scala:73)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 46 (map at Graph.scala:79)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 49 (map at Graph.scala:82)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 48 (map at Graph.scala:82)
+16/10/26 23:10:42 INFO DAGScheduler: Registering RDD 54 (map at Graph.scala:87)
+16/10/26 23:10:42 INFO DAGScheduler: Got job 0 (collect at Graph.scala:88) with 2 output partitions
+16/10/26 23:10:42 INFO DAGScheduler: Final stage: ResultStage 18(collect at Graph.scala:88)
+16/10/26 23:10:42 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 17)
+16/10/26 23:10:42 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 17)
+16/10/26 23:10:42 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[5] at map at Graph.scala:28), which has no missing parents
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(3920) called with curMem=132713, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.8 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(2217) called with curMem=136633, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:41122 (size: 2.2 KB, free: 530.0 MB)
+16/10/26 23:10:42 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:42 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[5] at map at Graph.scala:28)
+16/10/26 23:10:42 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+16/10/26 23:10:42 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[4] at map at Graph.scala:28), which has no missing parents
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(3720) called with curMem=138850, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.6 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(2161) called with curMem=142570, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.1 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:41122 (size: 2.1 KB, free: 530.0 MB)
+16/10/26 23:10:42 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:42 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[4] at map at Graph.scala:28)
+16/10/26 23:10:42 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+16/10/26 23:10:42 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2193 bytes)
+16/10/26 23:10:42 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2193 bytes)
+16/10/26 23:10:42 INFO DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[12] at map at Graph.scala:35), which has no missing parents
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(3720) called with curMem=144731, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.6 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO MemoryStore: ensureFreeSpace(2165) called with curMem=148451, maxMem=555755765
+16/10/26 23:10:42 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.1 KB, free 529.9 MB)
+16/10/26 23:10:42 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:41122 (size: 2.1 KB, free: 530.0 MB)
+16/10/26 23:10:42 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:42 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[12] at map at Graph.scala:35)
+16/10/26 23:10:42 INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks
+16/10/26 23:10:42 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+16/10/26 23:10:42 INFO Executor: Fetching http://198.202.116.129:35086/jars/graph.jar with timestamp 1477548640607
+16/10/26 23:10:42 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+16/10/26 23:10:42 INFO Utils: Fetching http://198.202.116.129:35086/jars/graph.jar to /tmp/spark-7eab1c2e-7f0b-4369-a427-28efd5f18309/userFiles-f336fa65-e6e7-4392-8c87-bd0668108c26/fetchFileTemp7657833522340302004.tmp
+16/10/26 23:10:42 INFO Executor: Adding file:/tmp/spark-7eab1c2e-7f0b-4369-a427-28efd5f18309/userFiles-f336fa65-e6e7-4392-8c87-bd0668108c26/graph.jar to class loader
+16/10/26 23:10:42 INFO HadoopRDD: Input split: file:/home/aimram/project3/small-graph.txt:0+28
+16/10/26 23:10:42 INFO HadoopRDD: Input split: file:/home/aimram/project3/small-graph.txt:28+28
+16/10/26 23:10:42 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+16/10/26 23:10:42 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+16/10/26 23:10:42 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+16/10/26 23:10:42 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+16/10/26 23:10:42 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+16/10/26 23:10:42 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2254 bytes result sent to driver
+16/10/26 23:10:42 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2254 bytes result sent to driver
+16/10/26 23:10:42 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, PROCESS_LOCAL, 2193 bytes)
+16/10/26 23:10:42 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, PROCESS_LOCAL, 2193 bytes)
+16/10/26 23:10:42 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+16/10/26 23:10:42 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+16/10/26 23:10:42 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 209 ms on localhost (1/2)
+16/10/26 23:10:42 INFO HadoopRDD: Input split: file:/home/aimram/project3/small-graph.txt:0+28
+16/10/26 23:10:42 INFO HadoopRDD: Input split: file:/home/aimram/project3/small-graph.txt:28+28
+16/10/26 23:10:42 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2254 bytes result sent to driver
+16/10/26 23:10:42 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2254 bytes result sent to driver
+16/10/26 23:10:42 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4, localhost, PROCESS_LOCAL, 2193 bytes)
+16/10/26 23:10:42 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 5, localhost, PROCESS_LOCAL, 2193 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 4.0 (TID 5)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 308 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 0 (map at Graph.scala:28) finished in 0.332 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 1, ShuffleMapStage 4)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 2, ShuffleMapStage 17, ShuffleMapStage 3, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 5, ShuffleMapStage 6, ShuffleMapStage 7, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 2: List(ShuffleMapStage 1)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 3: List(ShuffleMapStage 2)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO HadoopRDD: Input split: file:/home/aimram/project3/small-graph.txt:0+28
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 5: List(ShuffleMapStage 3, ShuffleMapStage 4)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 6: List(ShuffleMapStage 5)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 7: List(ShuffleMapStage 3, ShuffleMapStage 4)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO HadoopRDD: Input split: file:/home/aimram/project3/small-graph.txt:28+28
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 4.0 (TID 5). 2254 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 5) in 46 ms on localhost (1/2)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 121 ms on localhost (1/2)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 118 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 1 (map at Graph.scala:28) finished in 0.315 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 4)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 2, ShuffleMapStage 17, ShuffleMapStage 3, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 5, ShuffleMapStage 6, ShuffleMapStage 7, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 2254 bytes result sent to driver
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 2: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 3: List(ShuffleMapStage 2)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 5: List(ShuffleMapStage 3, ShuffleMapStage 4)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 6: List(ShuffleMapStage 5)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 7: List(ShuffleMapStage 3, ShuffleMapStage 4)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[9] at map at Graph.scala:29), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(3064) called with curMem=150616, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.0 KB, free 529.9 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1668) called with curMem=153680, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 1668.0 B, free 529.9 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:41122 (size: 1668.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[9] at map at Graph.scala:29)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 6, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 7, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 81 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 2.0 (TID 7)
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 4 (map at Graph.scala:35) finished in 0.326 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 2)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 17, ShuffleMapStage 3, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 5, ShuffleMapStage 6, ShuffleMapStage 7, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 3: List(ShuffleMapStage 2)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 5: List(ShuffleMapStage 3)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 6: List(ShuffleMapStage 5)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 7: List(ShuffleMapStage 3)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 2.0 (TID 6)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 2.0 (TID 7). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 7) in 50 ms on localhost (1/2)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 2.0 (TID 6). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 6) in 71 ms on localhost (2/2)
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 2 (map at Graph.scala:29) finished in 0.069 s
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set()
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 17, ShuffleMapStage 3, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 5, ShuffleMapStage 6, ShuffleMapStage 7, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 3: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 5: List(ShuffleMapStage 3)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 6: List(ShuffleMapStage 5)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 7: List(ShuffleMapStage 3)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[13] at map at Graph.scala:35), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2592) called with curMem=155348, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 2.5 KB, free 529.9 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1535) called with curMem=157940, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 1535.0 B, free 529.9 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:41122 (size: 1535.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[13] at map at Graph.scala:35)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 8, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 9, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 3.0 (TID 8)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 3.0 (TID 9)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 3.0 (TID 9). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 9) in 14 ms on localhost (1/2)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 3.0 (TID 8). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 8) in 23 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 3 (map at Graph.scala:35) finished in 0.022 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set()
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 5, ShuffleMapStage 6, ShuffleMapStage 7, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 5: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 6: List(ShuffleMapStage 5)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 7: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[19] at map at Graph.scala:48), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(3432) called with curMem=159475, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 3.4 KB, free 529.9 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1785) called with curMem=162907, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 1785.0 B, free 529.9 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on localhost:41122 (size: 1785.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[19] at map at Graph.scala:48)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 5.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 10, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 11, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 5.0 (TID 10)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 5.0 (TID 11)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[21] at map at Graph.scala:51), which is now runnable
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 5.0 (TID 10). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2944) called with curMem=164692, maxMem=555755765
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 10) in 10 ms on localhost (1/2)
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 2.9 KB, free 529.9 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1597) called with curMem=167636, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 1597.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on localhost:41122 (size: 1597.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[21] at map at Graph.scala:51)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 7.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 12, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 7.0 (TID 12)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 7.0 (TID 12). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 13, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 12) in 10 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 7.0 (TID 13)
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 5.0 (TID 11). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 11) in 25 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 7.0 (TID 13). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 13) in 10 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 5 (map at Graph.scala:48) finished in 0.029 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 6, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 6: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List(ShuffleMapStage 6, ShuffleMapStage 7)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[22] at map at Graph.scala:51), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2480) called with curMem=169233, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 2.4 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1502) called with curMem=171713, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 1502.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on localhost:41122 (size: 1502.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[22] at map at Graph.scala:51)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 6.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 14, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 7 (map at Graph.scala:51) finished in 0.027 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 6)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List(ShuffleMapStage 6)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List(ShuffleMapStage 6)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 15, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 6.0 (TID 14)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 6.0 (TID 15)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 6.0 (TID 14). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 14) in 13 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 6.0 (TID 15). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 15) in 20 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 6 (map at Graph.scala:51) finished in 0.020 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set()
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 10, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 14, ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List(ShuffleMapStage 8)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 10: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 8: List()
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 8 (MapPartitionsRDD[28] at map at Graph.scala:60), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(3432) called with curMem=173215, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 3.4 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1792) called with curMem=176647, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 1792.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on localhost:41122 (size: 1792.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[28] at map at Graph.scala:60)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 8.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 16, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 8.0 (TID 17, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 8.0 (TID 17)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 8.0 (TID 17). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 8.0 (TID 17) in 6 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 8.0 (TID 16)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[30] at map at Graph.scala:63), which is now runnable
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 8.0 (TID 16). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2944) called with curMem=178439, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 2.9 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1609) called with curMem=181383, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 1609.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on localhost:41122 (size: 1609.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 16) in 22 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[30] at map at Graph.scala:63)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 10.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 18, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 10.0 (TID 19, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 10.0 (TID 18)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 10.0 (TID 19)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 8 (map at Graph.scala:60) finished in 0.050 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 9, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 9: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9, ShuffleMapStage 10)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[31] at map at Graph.scala:63), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2480) called with curMem=182992, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 2.4 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1499) called with curMem=185472, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 1499.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:41122 (size: 1499.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 10.0 (TID 18). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 10.0 (TID 19). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[31] at map at Graph.scala:63)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 9.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 10.0 (TID 19) in 67 ms on localhost (1/2)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 20, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 21, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 9.0 (TID 20)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 18) in 80 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 10 (map at Graph.scala:63) finished in 0.066 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 9)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List(ShuffleMapStage 9)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List(ShuffleMapStage 9)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 9.0 (TID 20). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 9.0 (TID 21)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 20) in 6 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 9.0 (TID 21). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 21) in 8 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 9 (map at Graph.scala:63) finished in 0.011 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set()
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 11, ShuffleMapStage 12, ShuffleMapStage 13, ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 11: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List(ShuffleMapStage 11)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 13: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[37] at map at Graph.scala:70), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(3432) called with curMem=186971, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 3.4 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1786) called with curMem=190403, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 1786.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on localhost:41122 (size: 1786.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[37] at map at Graph.scala:70)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 11.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 22, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 23, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 11.0 (TID 22)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 11.0 (TID 23)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 11.0 (TID 23). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[39] at map at Graph.scala:73), which is now runnable
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 11.0 (TID 22). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2944) called with curMem=192189, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 2.9 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1597) called with curMem=195133, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 1597.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on localhost:41122 (size: 1597.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 23) in 18 ms on localhost (1/2)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 22) in 19 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[39] at map at Graph.scala:73)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 13.0 with 2 tasks
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 11 (map at Graph.scala:70) finished in 0.024 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 12, ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 12: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 12, ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[40] at map at Graph.scala:73), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2480) called with curMem=196730, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 2.4 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1498) called with curMem=199210, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 1498.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 24, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 13.0 (TID 25, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 13.0 (TID 24)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 13.0 (TID 25)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on localhost:41122 (size: 1498.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[40] at map at Graph.scala:73)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 12.0 with 2 tasks
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 13.0 (TID 24). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 26, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 24) in 15 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 12.0 (TID 26)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 12.0 (TID 26). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 27, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 26) in 5 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 12.0 (TID 27)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 12.0 (TID 27). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 20 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 27) in 9 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 12 (map at Graph.scala:73) finished in 0.015 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 13)
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 13.0 (TID 25). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 13.0 (TID 25) in 32 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List(ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List(ShuffleMapStage 13)
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 13 (map at Graph.scala:73) finished in 0.051 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set()
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 16, ShuffleMapStage 17, ResultStage 18, ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List(ShuffleMapStage 14)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 16: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 14: List()
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 14 (MapPartitionsRDD[46] at map at Graph.scala:79), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(3432) called with curMem=200708, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 3.4 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1789) called with curMem=204140, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 1789.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on localhost:41122 (size: 1789.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[46] at map at Graph.scala:79)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 14.0 with 2 tasks
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 16 (MapPartitionsRDD[48] at map at Graph.scala:82), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2944) called with curMem=205929, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 2.9 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 28, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 14.0 (TID 29, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 14.0 (TID 28)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1605) called with curMem=208873, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 1605.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:41122 (size: 1605.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 14.0 (TID 29)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[48] at map at Graph.scala:82)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 16.0 with 2 tasks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 14.0 (TID 28). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 30, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 28) in 15 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 16.0 (TID 30)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 14.0 (TID 29). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 16.0 (TID 31, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 14.0 (TID 29) in 27 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 14 (map at Graph.scala:79) finished in 0.029 s
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 16.0 (TID 31)
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 15, ShuffleMapStage 17, ResultStage 18)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 15: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15, ShuffleMapStage 16)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 15 (MapPartitionsRDD[49] at map at Graph.scala:82), which is now runnable
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2480) called with curMem=210478, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 2.4 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 16.0 (TID 31). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 16.0 (TID 31) in 7 ms on localhost (1/2)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(1499) called with curMem=212958, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 1499.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on localhost:41122 (size: 1499.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 15 (MapPartitionsRDD[49] at map at Graph.scala:82)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 15.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 32, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 15.0 (TID 32)
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 16.0 (TID 30). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 15.0 (TID 32). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 15.0 (TID 33, localhost, PROCESS_LOCAL, 1943 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 15.0 (TID 33)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 15.0 (TID 33). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 32) in 10 ms on localhost (1/2)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 30) in 34 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 16.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 15.0 (TID 33) in 8 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 16 (map at Graph.scala:82) finished in 0.041 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set(ShuffleMapStage 15)
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 17, ResultStage 18)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List(ShuffleMapStage 15)
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 15 (map at Graph.scala:82) finished in 0.006 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set()
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ShuffleMapStage 17, ResultStage 18)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ShuffleMapStage 17: List()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List(ShuffleMapStage 17)
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ShuffleMapStage 17 (MapPartitionsRDD[54] at map at Graph.scala:87), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(4040) called with curMem=214457, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 3.9 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2042) called with curMem=218497, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 2042.0 B, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on localhost:41122 (size: 2042.0 B, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[54] at map at Graph.scala:87)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 17.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 34, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 17.0 (TID 35, localhost, PROCESS_LOCAL, 2016 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 17.0 (TID 34)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 17.0 (TID 35)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 17.0 (TID 35). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 17.0 (TID 35) in 7 ms on localhost (1/2)
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 17.0 (TID 34). 1375 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 34) in 25 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 17.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ShuffleMapStage 17 (map at Graph.scala:87) finished in 0.027 s
+16/10/26 23:10:43 INFO DAGScheduler: looking for newly runnable stages
+16/10/26 23:10:43 INFO DAGScheduler: running: Set()
+16/10/26 23:10:43 INFO DAGScheduler: waiting: Set(ResultStage 18)
+16/10/26 23:10:43 INFO DAGScheduler: failed: Set()
+16/10/26 23:10:43 INFO DAGScheduler: Missing parents for ResultStage 18: List()
+16/10/26 23:10:43 INFO DAGScheduler: Submitting ResultStage 18 (MapPartitionsRDD[56] at map at Graph.scala:88), which is now runnable
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(4672) called with curMem=220539, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 4.6 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO MemoryStore: ensureFreeSpace(2270) called with curMem=225211, maxMem=555755765
+16/10/26 23:10:43 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 2.2 KB, free 529.8 MB)
+16/10/26 23:10:43 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on localhost:41122 (size: 2.2 KB, free: 530.0 MB)
+16/10/26 23:10:43 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:861
+16/10/26 23:10:43 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 18 (MapPartitionsRDD[56] at map at Graph.scala:88)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Adding task set 18.0 with 2 tasks
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 36, localhost, PROCESS_LOCAL, 1954 bytes)
+16/10/26 23:10:43 INFO TaskSetManager: Starting task 1.0 in stage 18.0 (TID 37, localhost, PROCESS_LOCAL, 1954 bytes)
+16/10/26 23:10:43 INFO Executor: Running task 0.0 in stage 18.0 (TID 36)
+16/10/26 23:10:43 INFO Executor: Running task 1.0 in stage 18.0 (TID 37)
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 0.0 in stage 18.0 (TID 36). 1295 bytes result sent to driver
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/10/26 23:10:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/10/26 23:10:43 INFO Executor: Finished task 1.0 in stage 18.0 (TID 37). 1295 bytes result sent to driver
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 36) in 12 ms on localhost (1/2)
+16/10/26 23:10:43 INFO TaskSetManager: Finished task 1.0 in stage 18.0 (TID 37) in 11 ms on localhost (2/2)
+16/10/26 23:10:43 INFO TaskSchedulerImpl: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+16/10/26 23:10:43 INFO DAGScheduler: ResultStage 18 (collect at Graph.scala:88) finished in 0.001 s
+16/10/26 23:10:43 INFO DAGScheduler: Job 0 finished: collect at Graph.scala:88, took 0.970079 s
+(0,3)
+(1,7)
+16/10/26 23:10:43 INFO SparkUI: Stopped Spark web UI at http://198.202.116.129:4040
+16/10/26 23:10:43 INFO DAGScheduler: Stopping DAGScheduler
+16/10/26 23:10:43 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+16/10/26 23:10:43 INFO MemoryStore: MemoryStore cleared
+16/10/26 23:10:43 INFO BlockManager: BlockManager stopped
+16/10/26 23:10:43 INFO BlockManagerMaster: BlockManagerMaster stopped
+16/10/26 23:10:43 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+16/10/26 23:10:43 INFO SparkContext: Successfully stopped SparkContext
+16/10/26 23:10:43 INFO ShutdownHookManager: Shutdown hook called
+16/10/26 23:10:43 INFO ShutdownHookManager: Deleting directory /tmp/spark-7eab1c2e-7f0b-4369-a427-28efd5f18309
+16/10/26 23:10:43 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+16/10/26 23:10:43 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.

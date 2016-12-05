@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH -A uot143
+#SBATCH --job-name="graph.local"
+#SBATCH --output="graph.local.out"
+#SBATCH --partition=shared
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2
+#SBATCH --export=ALL 
+#SBATCH --time=10
+
+module load hadoop/2.6.0 spark/1.5.2
+
+spark-submit --class edu.uta.cse6331.ShortestPath --master local[2] shortestpath.jar small-graph.txt
